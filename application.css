@@ -1,1 +1,75 @@
 
+.root {
+    -fx-font-family: "Serif";
+    -fx-background-color: linear-gradient(to bottom right, #3b2f2f, #1a1a1a);
+}
+
+.form-layout {
+    -fx-background-color: #d4af37;
+    -fx-padding: 25;
+    -fx-effect: dropshadow(three-pass-box, gold, 10, 0, 0, 0);
+}
+
+.title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-underline: false;
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.text-field, .password-field, .combo-box {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: white;
+    -fx-border-color: #d4af37;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-margin-bottom: 50%;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: white;
+    -fx-background-color: #2b2b2b;
+}
+
+.login-button, .register-button {
+    -fx-background-color: linear-gradient(to bottom, #b8860b, #8b7500);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-padding: 8 20;
+}
+
+.login-button:hover, .register-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffd700, #b8860b);
+    -fx-cursor: hand;
+}
+
+.register-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #d4af37;
+    -fx-border-width: 1.5;
+    -fx-text-fill: #d4af37;
+}
+
+.register-button:hover {
+    -fx-background-color: rgba(212, 175, 55, 0.1);
+}
+
+.message-label {
+    -fx-font-size: 13px;
+    -fx-padding: 10 0 0 0;
+}
+
+.success {
+    -fx-text-fill: lightgreen;
+}
+
+.error {
+    -fx-text-fill: #ff4c4c;
+}
