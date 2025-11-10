@@ -53,6 +53,8 @@ public class Main extends Application {
                 messageLabel);
         formLayout.setAlignment(Pos.CENTER);
         formLayout.setPadding(new Insets(30));
+        formLayout.setSpacing(10); // Adds 10px of vertical space between all items
+        formLayout.setAlignment(Pos.CENTER);
 
         // Style classes
         formLayout.getStyleClass().add("form-layout");
