@@ -24,7 +24,7 @@ public class Main extends Application {
     	// (25% of window height)
     	
         // Labels & Inputs
-        Label title = new Label("Login");
+        Label title = new Label("Welcome!");
         Label usernameLabel = new Label("Username:");
         TextField usernameField = new TextField();
         Label passwordLabel = new Label("Password:");
@@ -39,7 +39,7 @@ public class Main extends Application {
         passwordField.setMaxWidth(300);
         roleDropdown.setMaxWidth(150);
 
-        Button loginButton = new Button("Login");
+        Button loginButton = new Button("Log in");
         Button registerButton = new Button("Register");
         Label messageLabel = new Label();
 
@@ -94,7 +94,7 @@ public class Main extends Application {
         Scene scene = new Scene(formLayout, 420, 450);
         scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
-        primaryStage.setTitle("Shahi Haveli Login");
+        primaryStage.setTitle("Shahi Haveli | Login");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
