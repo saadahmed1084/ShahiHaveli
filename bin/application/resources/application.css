@@ -1,0 +1,509 @@
+/* ============================================
+   Shahi Haveli - Royal Gold & White Theme
+   ============================================ */
+
+.root {
+    -fx-font-family: "Georgia", "Serif", "Times New Roman";
+    -fx-background-color: #d4af37;
+}
+
+/* Apply gold background to all main containers */
+.dashboard-layout {
+    -fx-background-color: #d4af37;
+    -fx-padding: 30;
+}
+
+/* ========== Main Container Styles ========== */
+.form-layout {
+    -fx-background-color: transparent;
+    -fx-background-radius: 20;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 3;
+    -fx-border-radius: 20;
+    -fx-padding: 40;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.3), 20, 0, 0, 0);
+    -fx-background-insets: 10;
+}
+
+
+/* ========== Title Styles ========== */
+.title {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0, 0, 2);
+    -fx-font-family: "Georgia", "Serif";
+    -fx-padding: 10 0 20 0;
+}
+
+.subtitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 5, 0, 0, 1);
+}
+
+/* ========== Label Styles ========== */
+.label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* All labels should be white on gold background */
+.form-layout .label,
+.cart-section .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Menu item cards keep dark text for readability on white cards */
+.menu-item-card .label {
+    -fx-text-fill: #1a1a1a;
+}
+
+/* Table labels are white on black background */
+.table-view .label {
+    -fx-text-fill: #ffffff;
+}
+
+/* Subtitles are white */
+.form-layout .subtitle,
+.cart-section .subtitle {
+    -fx-text-fill: #ffffff !important;
+}
+
+.section-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 5 0;
+}
+
+/* ========== Input Field Styles ========== */
+.text-field, .password-field, .combo-box, .text-area {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #1a1a1a;
+    -fx-font-size: 14px;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 10;
+    -fx-pref-height: 35;
+}
+
+.text-field:focused, .password-field:focused, .combo-box:focused, .text-area:focused {
+    -fx-border-color: #ffd700;
+    -fx-border-width: 3;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.8), 8, 0, 0, 0);
+    -fx-background-color: #fffef5;
+}
+
+.combo-box .list-cell {
+    -fx-text-fill: #1a1a1a;
+    -fx-background-color: #ffffff;
+    -fx-padding: 8;
+}
+
+.combo-box .list-view {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d4af37;
+    -fx-border-width: 2;
+}
+
+.combo-box .list-cell:hover {
+    -fx-background-color: #fff8dc;
+}
+
+.text-area {
+    -fx-pref-height: 80;
+    -fx-text-fill: #1a1a1a;
+}
+
+/* ========== Button Styles ========== */
+.login-button {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f5f5f5, #e8e8e8);
+    -fx-text-fill: #b8860b;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 3;
+    -fx-padding: 12 30;
+    -fx-pref-width: 250;
+    -fx-pref-height: 45;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 0, 3);
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffd700, #ffed4e, #ffd700);
+    -fx-text-fill: #1a1a1a;
+    -fx-border-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 1.0), 15, 0, 0, 4);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.login-button:pressed {
+    -fx-background-color: linear-gradient(to bottom, #e8e8e8, #d0d0d0);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.register-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 3;
+    -fx-border-radius: 12;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-padding: 12 30;
+    -fx-pref-width: 250;
+    -fx-pref-height: 45;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.5), 8, 0, 0, 2);
+    -fx-cursor: hand;
+}
+
+.register-button:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-border-color: #ffd700;
+    -fx-text-fill: #ffd700;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.8), 12, 0, 0, 3);
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+.register-button:pressed {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-scale-x: 0.98;
+    -fx-scale-y: 0.98;
+}
+
+.action-button {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f5f5f5);
+    -fx-text-fill: #b8860b;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.action-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffd700, #ffed4e);
+    -fx-text-fill: #1a1a1a;
+    -fx-border-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.8), 8, 0, 0, 2);
+}
+
+/* ========== Message Label Styles ========== */
+.message-label {
+    -fx-font-size: 14px;
+    -fx-padding: 10 0;
+    -fx-font-weight: bold;
+}
+
+.success {
+    -fx-text-fill: #00ff00;
+    -fx-effect: dropshadow(gaussian, rgba(0, 255, 0, 0.8), 5, 0, 0, 1);
+}
+
+.error {
+    -fx-text-fill: #ff0000;
+    -fx-effect: dropshadow(gaussian, rgba(255, 0, 0, 0.8), 5, 0, 0, 1);
+}
+
+.info {
+    -fx-text-fill: #ffffff;
+}
+
+/* ========== Table Styles ========== */
+.table-view {
+    -fx-background-color: #000000;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1a1a1a;
+    -fx-border-color: #ffffff;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-border-color: #ffffff;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: #ffffff;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-padding: 8;
+    -fx-background-color: #000000;
+}
+
+.table-row-cell {
+    -fx-background-color: #000000;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #1a1a1a;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(212, 175, 55, 0.6);
+    -fx-text-fill: #ffffff;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: rgba(212, 175, 55, 0.4);
+}
+
+/* ========== ScrollPane Styles ========== */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .label {
+    -fx-text-fill: #ffffff;
+}
+
+.scroll-bar:vertical, .scroll-bar:horizontal {
+    -fx-background-color: rgba(255, 255, 255, 0.3);
+    -fx-pref-width: 12;
+    -fx-pref-height: 12;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f5f5f5);
+    -fx-background-radius: 6;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffd700, #ffffff);
+}
+
+/* ========== Radio Button Styles ========== */
+.radio-button {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+}
+
+.radio-button .radio {
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.radio-button:selected .radio {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffd700;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #b8860b;
+}
+
+/* ========== Checkbox Styles ========== */
+.check-box {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 14px;
+}
+
+.check-box .box {
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.check-box:selected .box {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffd700;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #b8860b;
+}
+
+/* ========== Spinner Styles ========== */
+.spinner {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-border-radius: 8;
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button {
+    -fx-background-color: #d4af37;
+}
+
+.spinner .increment-arrow-button:hover, .spinner .decrement-arrow-button:hover {
+    -fx-background-color: #ffd700;
+}
+
+/* ========== Alert/Dialog Styles ========== */
+.dialog-pane {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.95), rgba(255, 250, 240, 0.95));
+    -fx-border-color: #ffffff;
+    -fx-border-width: 3;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+}
+
+.dialog-pane .header-panel {
+    -fx-background-color: linear-gradient(to bottom, #b8860b, #8b6914);
+}
+
+.dialog-pane .content {
+    -fx-text-fill: #1a1a1a;
+    -fx-font-size: 14px;
+}
+
+.dialog-pane .button {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #f5f5f5);
+    -fx-text-fill: #b8860b;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-padding: 8 20;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffd700, #ffed4e);
+    -fx-text-fill: #1a1a1a;
+}
+
+/* ========== Decorative Elements ========== */
+.ornamental-border {
+    -fx-border-color: linear-gradient(to right, transparent, #ffffff, transparent);
+    -fx-border-width: 2 0 2 0;
+    -fx-padding: 15 0;
+}
+
+.royal-card {
+    -fx-background-color: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 250, 240, 0.9));
+    -fx-background-radius: 15;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-border-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 0);
+}
+
+/* ========== Menu Item Card ========== */
+.menu-item-card {
+    -fx-background-color: rgba(255, 255, 255, 0.95);
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 2);
+}
+
+.menu-item-card:hover {
+    -fx-border-color: #ffd700;
+    -fx-effect: dropshadow(gaussian, rgba(255, 215, 0, 0.6), 15, 0, 0, 3);
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-background-color: rgba(255, 255, 255, 0.98);
+}
+
+/* ========== Status Badges ========== */
+.status-pending {
+    -fx-background-color: rgba(255, 165, 0, 0.3);
+    -fx-text-fill: #ff8c00;
+    -fx-padding: 5 10;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #ff8c00;
+    -fx-border-width: 1;
+}
+
+.status-completed {
+    -fx-background-color: rgba(0, 255, 0, 0.3);
+    -fx-text-fill: #008000;
+    -fx-padding: 5 10;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #008000;
+    -fx-border-width: 1;
+}
+
+.status-cancelled {
+    -fx-background-color: rgba(255, 0, 0, 0.3);
+    -fx-text-fill: #cc0000;
+    -fx-padding: 5 10;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #cc0000;
+    -fx-border-width: 1;
+}
+
+/* ========== Price Display ========== */
+.price-label {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 5, 0, 0, 1);
+}
+
+/* Price label in white containers (menu items) should have dark text */
+.menu-item-card .price-label {
+    -fx-text-fill: #b8860b !important;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 5, 0, 0, 1);
+}
+
+/* ========== Cart Section ========== */
+.cart-section {
+    -fx-background-color: transparent;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 3;
+    -fx-border-radius: 15;
+    -fx-background-radius: 15;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 15, 0, 0, 0);
+}
+
+/* ========== Logo Container ========== */
+.logo-container {
+    -fx-background-color: transparent;
+    -fx-padding: 10;
+}
+
+.logo-image {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 15, 0, 0, 0);
+}
+
+/* ========== Responsive Adjustments ========== */
+@media (max-width: 800px) {
+    .title {
+        -fx-font-size: 24px;
+    }
+    
+    .form-layout {
+        -fx-padding: 20;
+    }
+}
