@@ -269,6 +269,11 @@
 }
 
 /* ========== ScrollPane Styles ========== */
+#root-scroll-pane {
+    -fx-background-color: #d4af37;
+    -fx-border-width: 0;
+}
+
 .scroll-pane {
     -fx-background-color: transparent;
     -fx-border-color: #ffffff;
@@ -499,7 +504,7 @@
 
 /* ========== Responsive Adjustments ========== */
 @media (max-width: 800px) {
-    .title {
+    #title {
         -fx-font-size: 24px;
     }
     
