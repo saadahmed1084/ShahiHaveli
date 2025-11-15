@@ -26,7 +26,7 @@ public class LoginView {
     public Scene createLoginScene() {
         // Main container with Mughal theme
         VBox mainContainer = new VBox(20);
-        mainContainer.setAlignment(Pos.CENTER);
+        mainContainer.setAlignment(Pos.TOP_CENTER);
         mainContainer.setPadding(new Insets(40));
         mainContainer.getStyleClass().add("dashboard-layout");
         
@@ -72,7 +72,7 @@ public class LoginView {
         titleBox.setAlignment(Pos.CENTER);
         
         if (logoView != null) {
-            headerBox.getChildren().addAll(logoView, titleBox);
+            headerBox.getChildren().add(logoView);
             System.out.println("Logo added to header");
         } else {
             headerBox.getChildren().add(titleBox);
@@ -136,13 +136,13 @@ public class LoginView {
         buttonBox.setAlignment(Pos.CENTER);
         buttonBox.setPadding(new Insets(20, 0, 0, 0));
         
-        Button loginButton = new Button("Enter the Court");
+        Button loginButton = new Button("Log in");
         loginButton.setPrefWidth(200);
         loginButton.setPrefHeight(50);
         loginButton.setFont(new Font("Georgia", 16));
         loginButton.getStyleClass().add("login-button");
         
-        Button registerButton = new Button("Register New Account");
+        Button registerButton = new Button("Register");
         registerButton.setPrefWidth(200);
         registerButton.setPrefHeight(50);
         registerButton.setFont(new Font("Georgia", 16));
@@ -221,9 +221,21 @@ public class LoginView {
             primaryStage.setScene(registerView.createRegisterScene());
         });
         
-        // Scene setup with gold background
-        Scene scene = new Scene(mainContainer, 800, 700);
-        scene.setFill(javafx.scene.paint.Color.web("#d4af37")); // Gold background
+     // --- New: Wrap mainContainer in a ScrollPane ---
+        ScrollPane scrollPane = new ScrollPane();
+        scrollPane.setContent(mainContainer);
+        scrollPane.setFitToWidth(true);
+        scrollPane.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
+        scrollPane.setVbarPolicy(ScrollPane.ScrollBarPolicy.AS_NEEDED);
+
+        // Give the ScrollPane a unique ID for CSS to target
+        scrollPane.setId("root-scroll-pane");
+
+        // Scene setup
+        // Use the scrollPane as the root
+        Scene scene = new Scene(scrollPane, 800, 700); 
+
+        // Load your CSS file as normal
         java.net.URL cssUrl = getClass().getResource("/application/resources/application.css");
         if (cssUrl != null) {
             scene.getStylesheets().add(cssUrl.toExternalForm());
@@ -231,7 +243,7 @@ public class LoginView {
         } else {
             System.err.println("CSS file not found!");
         }
-        
+
         return scene;
     }
     
